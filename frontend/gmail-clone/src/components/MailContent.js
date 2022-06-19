@@ -26,7 +26,7 @@ function MailContent(props) {
     useEffect(() => {
         const id = props.match.params.id
         // console.log(id);
-        axios.get(`http://localhost:5000/getMail${id}`)
+        axios.get(`https://gmail-clone-apis.herokuapp.com/getMail${id}`)
         .then(result =>{
             console.log(result.data)
             setmail(result.data)

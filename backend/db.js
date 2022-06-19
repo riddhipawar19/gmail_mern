@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const mongoURI = "mongodb://localhost:27017/gmail"
+const mongoURI = "mongodb+srv://admin:gmail_clone@cluster0.5eh4h.mongodb.net/?retryWrites=true&w=majority"
 
 const connectToMongo = () =>{
     mongoose.connect(mongoURI, () =>{
