@@ -8,6 +8,7 @@ import AppsIcon from '@material-ui/icons/Apps';
 import logo from "../icon.jpg"
 import "./Header.css"
 import { Avatar, IconButton } from '@material-ui/core';
+import rlogo from "../rlogo.png"
 
 function Header() {
     return (
@@ -27,7 +28,7 @@ function Header() {
                 <IconButton><HelpOutlineIcon/></IconButton>
                 <IconButton><SettingsIcon/></IconButton>
                 <IconButton><AppsIcon/></IconButton>
-                <IconButton><Avatar id="avatar"/></IconButton>
+                <IconButton><Avatar id="avatar" src={rlogo}/></IconButton>
             </div>
         </div>
     )

@@ -11,7 +11,9 @@ function Mail(props) {
     const history = useHistory()
 
     const deleteMail = (id) =>{
-        axios.delete(`http://localhost:5000/delete${id}`)
+        console.log(id)
+        axios.delete(`https://gmail-clone-apis.herokuapp.com/delete${id}`)
+        alert("Email has been deleted successfully!")
         document.location.reload()
     }
 

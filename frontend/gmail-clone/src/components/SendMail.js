@@ -17,7 +17,9 @@ function SendMail() {
     }
 
     const sendData = (e) =>{
-        axios.post("http://localhost:5000/insert", state)
+        axios.post("https://gmail-clone-apis.herokuapp.com/insert", state)
+        alert("Email has been sent successfully!")
+        document.location.reload()
     }
 
     return (
@@ -28,12 +30,12 @@ function SendMail() {
                    <button id="btn"><ClearIcon className="clear__icon"/></button>
                 </form>
             </div>
-            <form className="sendMail__contents">
+            <div className="sendMail__contents">
                 <input placeholder="To " onChange={e => setto(e.target.value)}></input>
                 <input placeholder="Subject " onChange={e => setsubject(e.target.value)}></input>
                 <input id="msg" onChange={e => setmsg(e.target.value)}></input>
                 <button type="submit" onClick={sendData}>Send</button>
-            </form>
+            </div>
         </div>
     )
 }

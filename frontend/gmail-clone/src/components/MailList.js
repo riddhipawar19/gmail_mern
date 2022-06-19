@@ -22,9 +22,10 @@ function MailList() {
     const [mails, setmails] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:5000/get").
+        axios.get("https://gmail-clone-apis.herokuapp.com/get").
         then(result =>{
             setmails(result.data)
+            console.log(result.data)
         })
     }, [])
 
