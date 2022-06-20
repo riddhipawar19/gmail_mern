@@ -1,5 +1,7 @@
+require("dotenv").config()
 const mongoose = require("mongoose")
-const mongoURI = "mongodb+srv://admin:gmail_clone@cluster0.5eh4h.mongodb.net/?retryWrites=true&w=majority"
+
+const mongoURI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.5eh4h.mongodb.net/?retryWrites=true&w=majority`
 
 const connectToMongo = () =>{
     mongoose.connect(mongoURI, () =>{
